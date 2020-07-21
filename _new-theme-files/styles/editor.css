@@ -1,0 +1,19 @@
+/* Main column width */
+.wp-block {
+    max-width: 60em;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: 74em;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}
+
+.wp-block a[href] {
+    color: blue;
+    text-decoration: underline;
+}

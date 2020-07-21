@@ -1,0 +1,169 @@
+.ghc-controls {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding-top: 1em;
+}
+.ghc-control {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1em;
+}
+.ghc-control label,
+.ghc-control .label {
+    display: block;
+    margin-bottom: .5em;
+    font-weight: bold;
+}
+.ghc-control .ghc-inline-label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+.ghc-control .label--with-options {
+    display: flex;
+    justify-content: space-between;
+}
+.ghc-control .label--with-options a {
+    font-weight: normal;
+    margin-left: auto;
+}
+.ghc-control .label--with-options a:not(:first-of-type) {
+    margin-left: 1.5em;
+}
+.ghc-control input:not([type=checkbox]):not([type=radio]),
+.ghc-control textarea,
+.ghc-control select {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+.ghc-control textarea {
+    min-height: 10em;
+}
+.ghc-control .howto {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+.ghc-control--multiselect-posts > div {
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    border: 1px solid #eee;
+    padding: 1em;
+}
+.ghc-control--multiselect-posts > div label {
+    font-weight: normal;
+}
+.ghc-control--multiselect-posts > div label input:checked ~ span {
+    font-weight: bold;
+}
+
+
+@media ( min-width: 48em ) {
+    .ghc-control--100 {
+        width: 100%;
+    }
+    .ghc-control--80 {
+        width: calc( 80% - 0.75em );
+    }
+    .ghc-control--70 {
+        width: calc( 70% - 0.75em );
+    }
+    .ghc-control--60 {
+        width: calc( 60% - 0.75em );
+    }
+    .ghc-control--50 {
+        width: calc( 50% - 0.75em );
+    }
+    .ghc-control--40 {
+        width: calc( 40% - 0.75em );
+    }
+    .ghc-control--33 {
+        width: calc( 33.3333% - 0.75em );
+    }
+    .ghc-control--30 {
+        width: calc( 30% - 0.75em );
+    }
+    .ghc-control--20 {
+        width: calc( 20% - 0.75em );
+    }
+
+    .ghc-control--multiselect-posts > div {
+        display: grid;
+        grid-template: auto / repeat(3, 1fr);
+    }
+}
+
+
+
+.ghc-hour-groups {
+    margin-bottom: 1em;
+}
+.ghc-hour-group {
+    border: 1px solid #eee;
+    padding: 1em;
+}
+.ghc-hour-group + .ghc-hour-group {
+    margin-top: 1em;
+}
+.ghc-hour-control {
+    margin-bottom: 1em;
+}
+
+
+@media ( min-width: 48em ) {
+    .ghc-hour-control {
+        display: flex;
+        align-items: center;
+        padding: 0.75em 1em;
+    }
+    .ghc-hour-control:nth-child(even) {
+        background-color: #f6f6f6;
+    }
+    .ghc-hour-control > label {
+        width: 15em;
+        margin-bottom: 0;
+    }
+    .ghc-hour-controls {
+        width: 100%;
+    }
+    .ghc-hour-controls__primary,
+    .ghc-hour-controls__secondary {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .ghc-hour-controls__secondary {
+        margin-top: 1em;
+    }
+    .ghc-hour-controls__hour {
+        width: calc(35% - 1em);
+        margin-right: 1em;
+    }
+    .ghc-hour-controls__alternate {
+        width: 30%;
+    }
+    .ghc-hour-controls__hour {
+        display: flex;
+        align-items: center;
+    }
+    .ghc-hour-controls label {
+        margin-right: 0.5em;
+        margin-bottom: 0;
+        font-weight: normal;
+    }
+}
+
+.ghc-class-instance-group {
+    border: 1px solid #eee;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+
+
+#post_type[value="ghc_employee"] ~ #poststuff #post-body-content {
+    margin: 0 !important;
+}

@@ -1,0 +1,369 @@
+/*==============================================================
+# Slider
+==============================================================*/
+.slider {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+}
+.slider__item {
+    position: relative;
+    color: var(--color-bg);
+    width: 100%;
+}
+.slider__item a {
+    display: block;
+}
+.slider__item picture {
+    display: block;
+    width: 100%;
+}
+.slider__item__text {
+    text-align: center;
+    padding: 1em 1.5em;
+}
+.slider__item__text h3 {
+    color: var(--color-highlight);
+    font-weight: 700;
+    font-size: 2.5em;
+    font-family: var(--font-narrow);
+    text-transform: uppercase;
+    margin: 0;
+}
+.slider__item__text p {
+    margin: 0;
+}
+@media ( min-width: 48em ) {
+    .slider__item__text {
+        position: absolute;
+        bottom: 1.5em;
+        width: 80%;
+        left: 10%;
+        background-color: rgba(0,0,0,0.7);
+    }
+    .slider__item__text h3 {
+        font-size: 3em;
+    }
+}
+
+.flickity-button {
+    display: none !important;
+}
+@media ( min-width: 48em ) {
+    .no-touchevents .flickity-button {
+        position: absolute !important;
+        display: block !important;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+    .no-touchevents .slider:hover .flickity-button {
+        opacity: 1;
+    }
+}
+
+
+/*==============================================================
+# Home Form
+==============================================================*/
+.home-form {
+    position: relative;
+    padding: 2em 0;
+    color: var(--color-black);
+}
+.home-form::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    background-color: var(--color-bg-alt);
+}
+.home-form .gform_wrapper h3.gform_title {
+    font-family: var(--font-narrow);
+    font-size: 1.75em;
+    text-transform: uppercase;
+}
+.home-form .gform_wrapper .gform_description {
+    max-width: 40em;
+    margin-right: auto;
+    margin-left: auto;
+}
+.home-form .gform_wrapper .gform_heading,
+.home-form .gform_wrapper .gform_footer {
+    text-align: center;
+}
+.home-form .gform_wrapper .gform_footer input[type="submit"] {
+    background-color: var(--color-highlight);
+    color: var(--color-black);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+@media ( min-width: 48em ) {
+    .home-form .gform_wrapper h3.gform_title {
+        font-size: 2.25em;
+    }
+}
+
+@media ( min-width: 54em ) {
+    .home-form .gform_fields {
+        display: grid !important;
+        grid-template: auto / repeat(5, 1fr);
+        grid-gap: 0 1.5em;
+    }
+    .home-form .gform_fields .gfield {
+        width: 100% !important;
+        padding-right: 0 !important;
+    }
+    .home-form .gform_fields .gf_list_inline {
+        grid-column: 1 / span 5;
+        display: grid;
+        grid-gap: 0 1.5em;
+        grid-template: auto / 20% 80%;
+    }
+    .home-form .gform_fields .gf_list_inline .gfield_description {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 2;
+    }
+}
+
+/*==============================================================
+# Icon Links
+==============================================================*/
+.icon-links {
+    position: relative;
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+    margin-bottom: 1.75em;
+}
+.icon-links__item {
+    display: block;
+    text-align: center;
+    padding: 1.5em;
+}
+.icon-links__item img {
+    display: block;
+    margin: 0 auto 0.75em;
+    height: 4em;
+    width: auto;
+}
+.icon-links__item span {
+    display: block;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-size: 0.875em;
+}
+@media ( max-width: 48em ) {
+    .icon-links__item:nth-child(odd) {
+        border-right: 1px solid #ccc;
+    }
+    .icon-links__item:nth-child(2) ~ .icon-links__item {
+        border-top: 1px solid #ccc;
+    }
+}
+@media ( min-width: 48em ) {
+    .icon-links {
+        grid-template: auto / repeat(4, 1fr);
+        margin-bottom: 5em;
+    }
+    .icon-links__item:not(:last-child) {
+        border-right: 1px solid #ccc;
+    }
+    .icon-links__item span {
+        font-size: 1em;
+    }
+}
+
+/*==============================================================
+# Legacy Blocks
+==============================================================*/
+.legacy-blocks {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+}
+.legacy-blocks a {
+    position: relative;
+    height: 16em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.legacy-blocks img {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.legacy-blocks h4 {
+    font-size: 1.75em;
+    font-family: var(--font-narrow);
+    text-transform: uppercase;
+    color: var(--color-highlight);
+    margin: 0;
+}
+.legacy-blocks p {
+    color: var(--color-bg);
+    margin: 0;
+    font-size: 0.875em;
+}
+@media ( min-width: 48em ) {
+    .legacy-blocks {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+    }
+    .legacy-blocks a {
+        height: 24em;
+    }
+    .legacy-blocks h4 {
+        font-size: 2.5em;
+    }
+    .legacy-blocks p {
+        font-size: 1em;
+    }
+}
+
+
+
+.legacy-home-intro {
+    padding: 2em 0;
+}
+.legacy-home-intro h1 {
+    font-family: var(--font-narrow);
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 0;
+}
+.legacy-home-intro p {
+    font-size: 0.875em;
+}
+
+@media ( min-width: 48em ) {
+    .legacy-home-intro h1 {
+        font-size: 3em;
+    }
+    .legacy-home-intro p {
+        font-size: 1em;
+    }
+}
+@media ( min-width: 60em ) {
+    .legacy-home-intro {
+        background-image: url(../img/legacy/bg-home-top-new.png);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 45% auto;
+        padding: 4em 40% 6em 0;
+    }
+}
+
+
+.legacy-home-two {
+    position: relative;
+    z-index: 1;
+    padding: 2em 0;
+}
+.legacy-home-two::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    background-color: var(--color-bg-alt);
+}
+.legacy-home-two h2 {
+    font-family: var(--font-narrow);
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 0;
+}
+.legacy-home-two p {
+    font-size: 0.875em;
+}
+@media ( min-width: 48em ) {
+    .legacy-home-two {
+        padding: 4em 0 5em;
+    }
+    .legacy-home-two h2 {
+        font-size: 3em;
+    }
+    .legacy-home-two p {
+        font-size: 1em;
+    }
+}
+@media ( min-width: 60em ) {
+    .legacy-home-two {
+        padding-left: 40%;
+    }
+    .legacy-home-two::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: calc(60% + 3em);
+        width: calc(100vw - 60%);
+        background-image: url(../img/legacy/bg-home-bottom-new.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: saturate(0.7);
+    }
+}
+
+
+.legacy-home-cta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4em 1.5em;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    background-color: var(--color-black);
+}
+.legacy-home-cta__bg {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    filter: saturate(0.7);
+}
+.legacy-home-cta h2 {
+    font-family: var(--font-narrow);
+    font-size: 1.75em;
+    text-transform: uppercase;
+    margin: 0;
+    background-color: var(--color-bg);
+    padding: 0 0.125em 0;
+    line-height: 1;
+}
+.legacy-home-cta h2 em {
+    font-style: normal;
+    display: inline-block;
+    background-color: var(--color-highlight);
+    padding: 0.125em 0.125em 0;
+}
+@media ( min-width: 48em ) {
+    .legacy-home-cta {
+        padding: 15% 1.5em;
+    }
+    .legacy-home-cta h2 {
+        font-size: 2.5em;
+    }
+}

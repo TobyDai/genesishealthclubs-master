@@ -1,0 +1,375 @@
+/*==============================================================
+# Variables
+==============================================================*/
+:root {
+    --font-sans: aktiv-grotesk, sans-serif;
+    --font-bold: archivo-black, sans-serif;
+
+    --font-sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --font-bold: var(--font-sans);
+    --font-narrow: titling-gothic-fb-compressed, sans-serif;
+
+	--color-body: var(--color-bg-dark);
+	--color-highlight: #c7f100;
+	--color-outline: rgba(199,241, 0, 0.5);
+
+    --color-grayblue: #4f5766;
+
+
+    --color-red: #9c1f2e;
+    --color-blue: #2905a1;
+
+	--color-bg: #fff;
+    --color-bg-alt: #efefef;
+	--color-bg-offset: #f6f6f6;
+    --color-bg-dark: #2d2d2d;
+    --color-bg-dark: #222;
+    --color-bg-xdark: #111;
+
+    --color-black: #000;
+    --color-almost-black: #1d1d1d;
+
+	--color-border: #aaa;
+    --color-border-light: #eee;
+
+	--border-radius: 0;
+
+    --max-width: 90em;
+    /*
+    --gradient: linear-gradient(to bottom right, var(--color-highlight), var(--color-blue));
+    --gradient-flat: linear-gradient(to right, var(--color-highlight), var(--color-blue));
+    */
+}
+
+/*==============================================================
+# Typography
+==============================================================*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: var(--color-body);
+	font-family: var(--font-sans);
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+    font-weight: 500;
+    margin: 1em 0 0.25em;
+}
+.copy h1, .copy h2, .copy h3, .copy h4, .copy h5, .copy h6,
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+    font-family: var(--font-narrow);
+    text-transform: uppercase;
+}
+
+h1,
+.wc-block-featured-category .wc-block-featured-category__title {
+	font-size: 2.618em;
+	line-height: 1;
+}
+h2 {
+	font-size: 1.168em;
+	line-height: 1.2;
+}
+h3 {
+	font-size: 1em;
+	line-height: 1.3;
+}
+
+h4, h5, h6 {
+	font-size: 1em
+}
+
+@media ( min-width: 48em ) {
+	h1,
+	.wc-block-featured-category .wc-block-featured-category__title {
+		font-size: 3.272em;
+	}
+	h2 {
+		font-size: 2.023em;
+	}
+	h3 {
+		font-size: 1.25em;
+	}
+}
+
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: var(--color-outline);
+	padding-right: 0.25em;
+	padding-left: 0.25em;
+	border-radius: var(--border-radius);
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+.entry-header {
+	margin-top: 3em;
+}
+.entry-header .entry-title {
+    margin-bottom: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.entry-content a:not(.wp-block-button__link),
+.wp-block a:not(.wp-block-button__link) {
+    color: var(--color-red);
+    text-decoration-line: underline;
+}
+/*
+a:visited {
+	color: purple;
+}
+
+a:hover, a:focus, a:active {
+	color: midnightblue;
+}
+*/
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover, a:active {
+	outline: 0;
+}
+
+a.bold-link {
+    font-weight: 700;
+    box-shadow: 0 2px 0 currentcolor;
+}
+
+.copy a[href]:not(.button) {
+    text-decoration: underline;
+}
+
+.copy > *:first-child {
+    margin-top: 0;
+}
+
+/*==============================================================
+# Elements
+==============================================================*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background-color: var(--color-bg);
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+	vertical-align: middle;
+}
+
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/*==============================================================
+# Buttons
+==============================================================*/
+.wp-block-button {
+    color: var(--color-bg-dark);
+}
+.theme-ghc .button,
+.theme-ghc a.button,
+.theme-ghc button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+body .gform_wrapper .gform_footer input.button,
+body .gform_wrapper .gform_footer input[type=submit],
+body .gform_wrapper .gform_page_footer input.button,
+body .gform_wrapper .gform_page_footer input[type=submit],
+.wp-block-button__link,
+a.wp-block-button__link,
+.wc-block-grid__product-add-to-cart a.wp-block-button__link {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	font-weight: 500;
+	border: 0;
+	border-radius: 0;
+	padding: 1em 1.25em 1.125em;
+	line-height: 1;
+	background-color: var(--color-black);
+	color: var(--color-bg);
+	cursor: pointer;
+}
+.theme-ghc .button--inverse,
+.theme-ghc a.button--inverse,
+.theme-ghc button.button--inverse {
+    color: var(--color-black);
+    color: var(--color-bg);
+}
+.theme-ghc .button--outline,
+.theme-ghc a.button--outline,
+.theme-ghc button.button--outline {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px currentColor;
+}
+
+body .gform_wrapper .gform_footer input.button,
+body .gform_wrapper .gform_footer input[type=submit],
+body .gform_wrapper .gform_page_footer input.button, .
+body .gform_wrapper .gform_page_footer input[type=submit] {
+    margin-right: 0;
+}
+
+
+.wp-block-button__link:active, .wp-block-button__link:focus, .wp-block-button__link:hover, .wp-block-button__link:visited {
+    color: var(--color-bg);
+}
+
+.single-product div.product .entry-summary .button.single_add_to_cart_button,
+.button--primary,
+a.button--primary {
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.1;
+	padding-bottom: 0.7em;
+}
+
+.no-touchevents .button:hover,
+.no-touchevents a.button:hover,
+.no-touchevents button:hover,
+.no-touchevents input[type="button"]:hover,
+.no-touchevents input[type="reset"]:hover,
+.no-touchevents input[type="submit"]:hover,
+.no-touchevents .added_to_cart:hover,
+.no-touchevents .wp-block-button__link:hover,
+.no-touchevents a.wp-block-button__link:hover,
+.no-touchevents .wc-block-grid__product-add-to-cart a.wp-block-button__link:hover {
+    color: var(--color-bg);
+}
+
+button:active, button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus,
+.no-touchevents .added_to_cart:active,
+.no-touchevents .added_to_cart:focus,
+.no-touchevents .wp-block-button__link:active,
+.no-touchevents .wp-block-button__link:focus,
+.no-touchevents a.wp-block-button__link:active,
+.no-touchevents a.wp-block-button__link:focus,
+.no-touchevents .wc-block-grid__product-add-to-cart a.wp-block-button__link:active,
+.no-touchevents .wc-block-grid__product-add-to-cart a.wp-block-button__link:focus  {
+    color: var(--color-bg-dark);
+}
